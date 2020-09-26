@@ -18,13 +18,13 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(jpg|png|gif|jpeg)$/,
+                test: /\.(jpg|png|gif|svg|jpeg)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'static/',
+                            outputPath: 'assets/',
                             useRelativePath: true
                         }
                     }
@@ -37,5 +37,4 @@ module.exports = {
             template: './public/index.html'
         })
     ]
-
 }

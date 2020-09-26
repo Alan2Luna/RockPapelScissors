@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Pocket from './Pocket';
+import TriangleBg from '../../public/images/bg-triangle.svg';
 
 const StyledGame = styled.div`
     display: grid;
@@ -31,7 +32,7 @@ const StyledGame = styled.div`
 const Game = ({ handleActive }) => {
     return (
         <StyledGame>
-            <img className="bg-triangle" src="../../images/bg-triangle.svg" />
+            <img className="bg-triangle" src={TriangleBg} />
             <Pocket name="paper" handleActive={handleActive} />
             <Pocket name="scissors" handleActive={handleActive} />
             <Pocket name="rock" handleActive={handleActive} />

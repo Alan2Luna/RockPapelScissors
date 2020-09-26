@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Rock from '../../public/images/icon-rock.svg';
+import Paper from '../../public/images/icon-paper.svg';
+import Scissors from '../../public/images/icon-scissors.svg';
+
 const options = {
     "paper": [
         "hsl(230, 89%, 65%)",
@@ -56,6 +60,16 @@ const StyledPocket = styled.div`
     }
 `
 
+const selectImage = (name) => {
+    switch(name) {
+        case 'rock':
+            return Rock
+        case 'paper':
+            return Paper
+        case 'scissors':
+            return Scissors
+    }
+}
 
 const Pocket = ({ name, handleActive, size, active, winner}) => {
     const handleClick = () => {
@@ -73,7 +87,7 @@ const Pocket = ({ name, handleActive, size, active, winner}) => {
             winner={winner}
         >
             <div className="box__icon">
-                <img src={`../../images/icon-${name}.svg`} /> 
+                <img src={selectImage(name)} /> 
             </div>
         </StyledPocket>
     );

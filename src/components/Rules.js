@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import Imagen from '../../public/images/image-rules.svg';
+import ButtonX from '../../public/images/icon-close.svg';
 
 const StyledModal = styled.div`
     display: flex;
@@ -59,8 +61,8 @@ const Rules = ({ onClose }) => {
         <StyledModal>
             <div className="modal__box">
                 <h2 className="modal__h2">Rules</h2>
-                <img src='../../images/image-rules.svg' />
-                <button onClick={onClose} ><img src="../../images/icon-close.svg" /></button>
+                <img src={Imagen} />
+                <button onClick={onClose} ><img src={ButtonX} /></button>
             </div>
         </StyledModal>,
         document.getElementById('modal')
